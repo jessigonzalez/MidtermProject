@@ -4,7 +4,7 @@ import {BrowserRouter as Router, Route} from "react-router-dom"
 import './App.css';
 
 import Home from './containers/Home/index.js'
-import Adopt from './components/adoptionPage'
+import Article from './components/adoptionPage'
 
 class App extends Component {
     render(){
@@ -12,7 +12,7 @@ class App extends Component {
             <div className="App">
               <Router>
                   <Route exact path="/" component={Home} />
-                  <div><button onClick={this.redirectToTarget} component={Adopt}>Redirect</button></div>
+                  <Route path="/article/:id" component={Article} />
               </Router>
             </div>
         );
